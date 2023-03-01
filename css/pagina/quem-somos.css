@@ -1,0 +1,113 @@
+.quem-somos-container {
+  background: url(../../imagens/quem-somos-img/fundoAzul.svg) no-repeat center
+    center;
+  padding-top: 12rem;
+  padding-bottom: 22rem;
+  margin-top: -30rem;
+  position: relative;
+  z-index: 1002;
+}
+
+.quem-somos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-top: 25rem;
+}
+
+.quem-somos-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-left: -6rem;
+}
+
+.quem-somos .button div {
+  color: white;
+}
+
+.quem-somos-conteudo {
+  margin-left: -5rem;
+}
+
+.quem-somos-conteudo-escrito > p {
+  color: #0c547a;
+  font-size: 1.125rem;
+  font-family: "Lato", sans-serif;
+
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+
+.quem-somos-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.quem-somos-item {
+  display: flex;
+  max-width: 500px;
+  gap: 20px 0px;
+}
+
+.quem-somos-item h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  background-color: #9ddaf8;
+  margin-left: -2px;
+  padding: 7px 12px;
+}
+
+.quem-somos-item p {
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+  padding: 4.2px 12px;
+  max-width: 53ch;
+  color: #0c547a;
+  margin-left: -2px;
+  background-color: white;
+  border-radius: 0 0 10px 0;
+}
+
+@media (max-width: 800px) {
+  .quem-somos-container {
+    background: url(../../imagens/dec/fundoAzulMobile.svg) no-repeat center
+      center;
+    padding-top: 25rem;
+  }
+  .quem-somos {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .quem-somos-conteudo {
+    margin-left: 0;
+    padding-top: 2rem;
+  }
+
+  .quem-somos-img {
+    display: none;
+  }
+
+  .quem-somos-item p {
+    border-radius: 0px 0px 15px 15px;
+  }
+
+  .quem-somos-item h2 {
+    border-radius: 15px 15px 0px 0px;
+  }
+
+  .quem-somos-item img {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .quem-somos-container {
+    padding-top: 20rem;
+    margin-top: -38rem;
+  }
+}

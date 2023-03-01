@@ -1,0 +1,62 @@
+.atuamos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6.25rem 2rem 0 2rem;
+}
+
+.atuamos-conteudo-escrito div {
+  display: flex;
+  align-items: center;
+}
+
+.atuamos-conteudo-escrito div > p {
+  display: inline-block;
+  padding: 8px 30px;
+  max-width: max-content;
+  border: 3px solid #0c547a;
+  border-radius: 20px 0px 0px 0px;
+  margin-bottom: 2rem;
+
+  font-size: 1rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  color: #0c547a;
+}
+
+.atuamos-conteudo-escrito .button {
+  padding-bottom: 42px;
+}
+
+.atuamos-conteudo-escrito .button::after {
+  content: '';
+  display: inline-block;
+  width: 47px;
+  height: 47px;
+  background: url(../../imagens/dec/detalhe-quem.svg) no-repeat center center;
+}
+
+.atuamos-conteudo-escrito > p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.125rem;
+  color: #0c547a;
+  font-weight: 500;
+  max-width: 55ch;
+  margin-bottom: 20px;
+}
+
+.atuamos-conteudo-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 800px) {
+  .atuamos-conteudo-img {
+    display: none;
+  }
+
+  .atuamos {
+    padding-top: 4rem;
+  }
+}

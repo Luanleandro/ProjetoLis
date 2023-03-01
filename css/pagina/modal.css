@@ -1,0 +1,158 @@
+.modal-container {
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container.ativo {
+  display: flex;
+}
+
+.modal {
+  margin: 0 auto;
+  max-width: 1200px;
+  background: white;
+  border-radius: 33px 33px 0px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.modal-back {
+  padding-top: 85px;
+  background-color: #0c547a;
+  border-radius: 33px 33px 0px 0px;
+  grid-column: span 2;
+}
+
+.modal-imagens,
+.modal-conteudo {
+  padding: 30px 30px 30px 0px;
+}
+
+.modal-conteudo {
+  display: grid;
+}
+
+.modal-conteudo h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: #e3b505;
+  animation: show-down 0.5s forwards;
+}
+
+.modal-imagens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  animation: show-down 0.5s forwards;
+}
+
+.modal-imagens img:first-child {
+  min-width: 100%;
+}
+
+.modal-imagens img {
+  flex: 1;
+  min-width: 200px;
+}
+
+.modal-conteudo p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin-top: 20px;
+  animation: show-down 0.5s forwards;
+}
+
+.modal-conteudo-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5rem;
+}
+
+.modal-conteudo span {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 10px 25px;
+  background-color: #0097d4;
+  color: white;
+  border-radius: 12px;
+}
+
+.modal-conteudo-info button {
+  background: url(../../imagens/modal/setaEsquerda.svg) no-repeat;
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+
+.modal-conteudo-info button:last-child {
+  background: url(../../imagens/modal/setaDireita.svg) no-repeat;
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+
+@media (max-width: 1200px) {
+  .modal {
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal-imagens,
+  .modal-conteudo {
+    padding: 20px;
+  }
+
+  .modal-conteudo p,
+  .modal-conteudo span {
+    font-size: 0.975rem;
+  }
+
+  .modal-imagens img {
+    display: none;
+  }
+
+  .modal-imagens img:first-child {
+    display: block;
+    max-width: 280px;
+  }
+
+  .modal-conteudo-info {
+    padding-top: 2rem;
+  }
+
+  @media (max-width: 500px) {
+    .modal {
+      border-radius: 33px;
+    }
+
+    .modal-conteudo h1 {
+      font-size: 1.5rem;
+    }
+
+    .modal-conteudo p,
+    .modal-conteudo span {
+      font-size: 0.785rem;
+    }
+
+    .modal-conteudo-info {
+      padding: 0px;
+    }
+
+    .modal-imagens {
+      padding-bottom: 0px;
+    }
+  }
+}

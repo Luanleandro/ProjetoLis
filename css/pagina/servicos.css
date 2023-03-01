@@ -1,0 +1,98 @@
+.servicos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 5rem;
+  padding-top: 20rem;
+  margin-top: -30rem;
+}
+
+.servicos-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+
+.servicos-item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.servicos-item img {
+  align-self: center;
+  max-width: 117px;
+}
+
+.servicos-item-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicos-item-conteudo h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: white;
+  font-weight: 900;
+}
+
+.servicos-item-conteudo p {
+  max-width: 20ch;
+  text-align: center;
+
+  font-family: 'Lato', sans-serif;
+  font-size: 1.563rem;
+  color: #0c547a;
+  font-weight: 500;
+}
+
+.servicos-container {
+  padding-bottom: 10rem;
+  background: url(../../imagens/servicos-img/fundoAmarelo.svg) no-repeat top
+    center;
+}
+
+@media (max-width: 1200px) {
+  .servicos-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .servicos {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: -21rem;
+    padding-top: 7rem;
+  }
+
+  .servicos-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 3rem;
+  }
+
+  .servicos-container {
+    padding-bottom: 7rem;
+  }
+
+  .servicos-item-conteudo h2 {
+    font-size: 1.5rem;
+  }
+
+  .servicos-item-conteudo p {
+    font-size: 1.225rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .servicos {
+    gap: 20px;
+  }
+}

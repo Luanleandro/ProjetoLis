@@ -1,0 +1,58 @@
+.introducao {
+  display: flex;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  gap: 0 40px;
+  justify-content: space-between;
+}
+
+.introducao-conteudo .button {
+  padding-top: 4rem;
+}
+
+.introducao-conteudo {
+  padding-top: 5.625rem;
+}
+
+.introducao-conteudo > img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.introducao-conteudo > p {
+  padding-top: 1.25rem;
+
+  font-family: 'Lato', sans-serif;
+  font-size: 1.313rem;
+  font-weight: bold;
+  color: #00000088;
+  max-width: 35ch;
+}
+
+.introducao-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.introducao-button span {
+  background: url(../../imagens/dec/detalhe-botao.svg) no-repeat center center;
+}
+
+@media (max-width: 800px) {
+  .introducao-conteudo {
+    padding-top: 2.5rem;
+  }
+
+  .introducao-conteudo > p {
+    font-size: 1.125rem;
+  }
+
+  .introducao picture {
+    display: none;
+  }
+
+  .introducao-conteudo .button {
+    padding-top: 2rem;
+  }
+}

@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import 'css/geral.css';
+@import 'css/pagina/header.css';
+@import 'css/pagina/introducao.css';
+@import 'css/pagina/quem-somos.css';
+@import 'css/pagina/formulario.css';
+@import 'css/pagina/servicos.css';
+@import 'css/pagina/clientes.css';
+@import 'css/pagina/atuamos.css';
+@import 'css/pagina/solucao.css';
+@import 'css/pagina/trabalhos.css';
+@import 'css/pagina/modal.css';

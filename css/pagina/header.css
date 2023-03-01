@@ -1,0 +1,227 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1300px;
+  padding: 1.563rem 20px;
+  margin: 0 auto;
+}
+
+.header-menu ul {
+  display: flex;
+  gap: 40px;
+
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #0c547a;
+}
+
+.header-menu a {
+  display: inline-block;
+  padding: 6px 8px;
+}
+
+.menu-button {
+  background: #7cc3e6;
+  border-radius: 20px;
+  padding: 0px 4px !important;
+  height: max-content;
+}
+
+.dropdown-login.ativo::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #0c547a;
+}
+
+[data-dropdown] {
+  position: relative;
+}
+
+.menu-button div {
+  background-color: #0c547a;
+  color: white;
+  padding: 6px 14px !important;
+  border-radius: 20px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.dropdown-login {
+  display: none;
+}
+
+.dropdown-login.ativo {
+  display: grid;
+  grid-template-columns: 1fr;
+  position: absolute;
+  z-index: 100;
+  padding: 20px;
+  top: 42px;
+  left: -20px;
+  background-color: #0c547a;
+  border-radius: 10px;
+  width: 240px;
+
+  animation: show-left 0.3s forwards;
+}
+
+.dropdown-login label {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: none;
+  margin: 5px 0px;
+}
+
+.dropdown-login input {
+  padding: 12px;
+  width: 100%;
+
+  border-radius: 10px;
+  margin-bottom: 9px;
+}
+
+.dropdown-login input[type='text']:focus,
+.dropdown-login input[type='password']:focus {
+  outline: none;
+  border-color: #0c547a;
+  background: #fff;
+  box-shadow: 0px 0px 0px 2px #7cc3e6;
+}
+
+.button-drop {
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #e3b505;
+  margin-top: 16px;
+  max-width: max-content;
+
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  justify-self: center;
+  border: none;
+  cursor: pointer;
+}
+
+.button-translate {
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: -2px;
+}
+
+@media (max-width: 900px) {
+  .header {
+    position: relative;
+    z-index: 1005;
+  }
+
+  .header-menu ul {
+    display: none;
+  }
+
+  .header-menu a {
+    padding: 10px 12px;
+  }
+
+  [data-menu='list'].ativo {
+    display: flex;
+    animation: show-up 0.3s forwards;
+    background: #fff;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  [data-menu='button'] {
+    display: flex;
+    background: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    align-items: center;
+    position: relative;
+    z-index: 300;
+  }
+
+  [data-menu='button']::before {
+    margin-right: 4px;
+    content: '';
+    display: inline-block;
+    height: 4px;
+    width: 22px;
+    background: #0c547a;
+    box-shadow: 0 8px #0c547a, 0 -8px #0c547a;
+    transition: transform 0.3s;
+  }
+
+  [data-menu='button'].ativo::before {
+    transform: rotate(90deg);
+  }
+
+  [data-menu='list'] {
+    display: none;
+    right: 0;
+    top: 80px;
+    position: absolute;
+    padding: 10px 20px;
+    background: var(--cor-12);
+    z-index: 1005;
+  }
+
+  [data-menu='list'].ativo {
+    display: flex;
+    animation: show-up 0.3s forwards;
+    background: #fff;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dropdown-login.ativo {
+    left: -70px;
+  }
+}
+
+@keyframes show-up {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes show-left {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

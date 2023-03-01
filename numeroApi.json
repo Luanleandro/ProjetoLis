@@ -1,0 +1,22 @@
+[
+  {
+    "img": "./imagens/servicos-img/servicos-img1.svg",
+    "titulo": "projetos concluídos",
+    "total": 150
+  },
+  {
+    "img": "./imagens/servicos-img/servicos-img2.svg",
+    "titulo": "clientes atendidos",
+    "total": 40.0
+  },
+  {
+    "img": "./imagens/servicos-img/servicos-img3.svg",
+    "titulo": "recursos educacionais desenvolvidos",
+    "total": 2000
+  },
+  {
+    "img": "./imagens/servicos-img/servicos-img4.svg",
+    "titulo": "lifelong learners impactados",
+    "total": 500
+  }
+]
