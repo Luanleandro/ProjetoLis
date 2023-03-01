@@ -127,6 +127,11 @@
   margin-top: -2px;
 }
 
+.button-translate img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
 @media (max-width: 900px) {
   .header {
     position: relative;
